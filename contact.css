@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contact Section */
+#contact {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('blue-wavy-background-modern-design_677411-2137.jpg'); /* Your wallpaper image path here */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1200px;
+  background-color: transparent; /* No white background */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Side (Text and Social Media Icons) */
+.contact-left {
+  width: 50%;
+  padding: 40px;
+  color: white; /* Ensure text is white for contrast */
+}
+
+.contact-left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.contact-left p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #bbb;
+}
+
+.contact-description {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  margin: 0 15px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f1f1f1; /* Lighter color on hover */
+}
+
+/* Right Side (Contact Form) */
+.contact-right {
+  width: 50%;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background to make form readable */
+  border-radius: 10px;
+}
+
+.contact-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none;
+  border: 1px solid #0169f0; /* Focus border color */
+}
+
+.contact-right button {
+  padding: 12px;
+  background-color: #0169f0;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-right button:hover {
+  background-color: #014a91;
+  transform: translateY(-3px); /* Button hover effect */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-left h1 {
+    font-size: 2rem;
+  }
+
+  .contact-left p {
+    font-size: 1rem;
+  }
+
+  .contact-right h2 {
+    font-size: 1.5rem;
+  }
+}

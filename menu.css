@@ -1,0 +1,227 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Updated font */
+  color: white;
+  background-color: #111; /* Dark background for a professional feel */
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Updated font */
+  background-color: #111; /* Dark background for a professional feel */
+  color: white;
+  background-image: url('blue-wavy-background-modern-design_677411-2138.jpg'); /* Global background for the rest of the pages */
+  background-size: cover; /* Ensure the image covers the whole background */
+  background-position: center center; /* Center the image */
+  background-attachment: fixed; /* Optional: Makes the background image fixed when scrolling */
+  background-repeat: no-repeat; /* Fix image repeating */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;           /* Make it sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;             /* Keep it above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000;    /* Black background for navbar */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 600;
+  font-size: 18px; /* Slightly larger font for better visibility */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #0169f0; /* Blue color on hover */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px 0; /* Add padding to prevent overlap with navbar */
+  gap: 60px;
+  position: relative; /* Ensure that video is positioned correctly */
+  flex-wrap: wrap;
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the video covers the section */
+  z-index: -1; /* Ensure video stays behind the text */
+  filter: brightness(50%); /* Darkens the video to make text stand out more */
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  z-index: 1; /* Ensure that content is above the video */
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  color: #0169f0;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for better contrast */
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ccc;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+}
+
+/* Button Styling */
+.hero-content .btn {
+  padding: 12px 25px;
+  background: #0169f0;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background: #014a91; /* Darker shade of blue on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Added shadow for hover effect */
+}
+
+/* Portfolio Section */
+#portfolio {
+  background-color: transparent !important;
+  color: white;
+  padding: 50px 0;
+}
+
+#portfolio h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 1.5rem;
+  background-color: #1f1f1f;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card-text {
+  color: #bbb;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-light {
+  background-color: #0169f0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #0169f0;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 40px; /* Adjust the font size for smaller screens */
+  }
+
+  .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Make paragraph text a little smaller */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 32px; /* Adjust even further for small devices */
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+
+  .hero-content .btn {
+    font-size: 14px; /* Adjust button size on small screens */
+  }
+}
